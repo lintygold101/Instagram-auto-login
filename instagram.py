@@ -21,15 +21,3 @@ folder = driver.find_element_by_xpath("//input[@name='password']")
 folder.send_keys(password)
 folder = driver.find_element_by_xpath("/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[3]")
 folder.click()
-
-try:
-    element_present = EC.presence_of_element_located((By.ID, 'element_id'))
-    WebDriverWait(driver, "10s").until(element_present)
-except TimeoutException:
-    print("Timed out waiting for page to load"
-    )
-
-folder = driver.find_element_by_xpath("/html/body/div[3]/div/div/div/div[3]/button[1]")
-folder.click()
-folder = driver.find_element_by_xpath("/html/body/div[1]/section/nav/div[2]/div/div/div[3]/div/div[2]/a/svg")
-folder.click()     
